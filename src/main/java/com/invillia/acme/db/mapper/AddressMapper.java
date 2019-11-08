@@ -18,6 +18,7 @@ public class AddressMapper {
                 .number(address.getNumber())
                 .place(address.getPlace())
                 .state(address.getState())
+                .zipcode(address.getZipcode())
                 .build();
     }
 
@@ -30,6 +31,7 @@ public class AddressMapper {
                 .number(addressDto.getNumber())
                 .place(addressDto.getPlace())
                 .state(addressDto.getState())
+                .zipcode(addressDto.getZipcode())
                 .build();
     }
 

@@ -1,7 +1,7 @@
 package com.invillia.acme.service;
 
-import com.invillia.acme.db.entity.Store;
 import com.invillia.acme.exception.ServiceException;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,11 +9,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 @Slf4j
 public abstract class BaseService<Entity, Repository extends JpaRepository<Entity, String>> {
 
+    @Getter
     @Autowired
     private Repository repository;
 
     /**
-     * Método de abstract uma Store
+     * Método abstract para salvar
      *
      * @param entity
      * @return Entity
@@ -27,10 +28,8 @@ public abstract class BaseService<Entity, Repository extends JpaRepository<Entit
         }
     }
 
-    public abstract Store update(Store convertTo);
-
     /**
-     * Método de atualizar uma Store
+     * Método abstract para update e tratamento de concorrência.
      *
      * @param entity
      * @param id

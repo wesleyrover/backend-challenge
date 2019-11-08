@@ -19,6 +19,6 @@ public class AddressDto {
     private java.lang.Integer number;
     private java.lang.String neighborhood;
     private java.lang.String city;
-    private java.lang.Double zipcode;
+    private java.lang.String zipcode;
     private java.lang.String state;
 }
