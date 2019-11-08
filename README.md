@@ -1,5 +1,18 @@
 # Invillia recruitment challenge
 
+# My stories
+  01 - Create a **Store** OK
+  
+# My stories features (describe or implement):
+* Asynchronous processing 
+* Database - ok
+* Docker
+* AWS
+* Security
+* Swagger - ok
+* Clean Code - ok
+
+
 [![Build Status](https://travis-ci.org/shelsonjava/invillia.svg?branch=master)](https://travis-ci.org/shelsonjava/invillia)
 
 ![Invillia Logo](https://invillia.com/public/assets/img/logo-invillia.svg)
