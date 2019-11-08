@@ -1,5 +1,6 @@
 package com.invillia.acme.service;
 
+import com.invillia.acme.db.entity.Store;
 import com.invillia.acme.exception.ServiceException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,12 @@ public abstract class BaseService<Entity, Repository extends JpaRepository<Entit
     @Autowired
     private Repository repository;
 
+    /**
+     * Método de abstract uma Store
+     *
+     * @param entity
+     * @return Entity
+     */
     public Entity save(Entity entity) throws Exception {
         try {
             return repository.save(entity);
@@ -18,5 +25,20 @@ public abstract class BaseService<Entity, Repository extends JpaRepository<Entit
             log.error("Fail Save", e);
             throw new ServiceException("Fail Save.", e);
         }
+    }
+
+    public abstract Store update(Store convertTo);
+
+    /**
+     * Método de atualizar uma Store
+     *
+     * @param entity
+     * @param id
+     * @return Store
+     */
+    public Entity update(Entity entity, String id) throws Exception {
+        if(!repository.findById(id).isPresent())
+            throw new ServiceException("Registro não pode ser localizado, o mesmo no existe ou foi excluído.", null);
+        return this.save(entity);
     }
 }
