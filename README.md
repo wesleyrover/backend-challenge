@@ -1,10 +1,14 @@
 # Invillia recruitment challenge
 
 # My stories
-  01 - Create a **Store** OK
-  02 - Update a **Store** information Ok
-  03 - Retrieve ok
-  04 - 
+
+  * 01 - Create a **Store** OK 
+  * 02 - Update a **Store** information Ok
+  * 03 - Retrieve a **Store** by parameters OK
+  * 04 - Create an **Order** with items
+  * 05 - Create a **Payment** for an **Order**
+  * 06 - Retrieve an **Order** by parameters
+  * 07 - Refund **Order** or any **Order Item**
   
 # My stories features (describe or implement):
 * Asynchronous processing 

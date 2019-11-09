@@ -1,8 +1,8 @@
-package com.invillia.acme.store.service;
+package com.invillia.acme.order.service;
 
-import com.invillia.acme.store.db.entity.Store;
-import com.invillia.acme.store.repository.StoreRepository;
-import com.invillia.acme.store.repository.predicates.StorePredicates;
+import com.invillia.acme.order.db.entity.Store;
+import com.invillia.acme.order.repository.StoreRepository;
+import com.invillia.acme.order.repository.predicates.StorePredicates;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;

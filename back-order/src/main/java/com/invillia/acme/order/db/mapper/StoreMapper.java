@@ -1,7 +1,7 @@
-package com.invillia.acme.store.db.mapper;
+package com.invillia.acme.order.db.mapper;
 
-import com.invillia.acme.store.db.dto.StoreDto;
-import com.invillia.acme.store.db.entity.Store;
+import com.invillia.acme.order.db.dto.StoreDto;
+import com.invillia.acme.order.db.entity.Store;
 
 import java.util.List;
 import java.util.Objects;

@@ -1,7 +1,7 @@
-package com.invillia.acme.store.service;
+package com.invillia.acme.order.service;
 
-import com.invillia.acme.store.db.entity.Address;
-import com.invillia.acme.store.repository.AddressRepository;
+import com.invillia.acme.order.db.entity.Address;
+import com.invillia.acme.order.repository.AddressRepository;
 import org.springframework.stereotype.Service;
 
 @Service

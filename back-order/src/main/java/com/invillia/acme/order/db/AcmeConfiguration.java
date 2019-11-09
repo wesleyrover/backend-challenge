@@ -1,4 +1,4 @@
-package com.invillia.acme.store.db;
+package com.invillia.acme.order.db;
 
 public class AcmeConfiguration {
 }

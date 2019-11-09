@@ -1,4 +1,4 @@
-package com.invillia.acme.store.db.entity;
+package com.invillia.acme.order.db.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.UUID;
 
 @Entity
 @Table(name = "\"STORE\"")

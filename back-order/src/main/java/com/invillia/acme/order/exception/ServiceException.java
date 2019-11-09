@@ -1,4 +1,4 @@
-package com.invillia.acme.store.exception;
+package com.invillia.acme.order.exception;
 
 public class ServiceException  extends RuntimeException {
 

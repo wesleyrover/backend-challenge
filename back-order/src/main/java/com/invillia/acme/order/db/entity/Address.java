@@ -1,4 +1,4 @@
-package com.invillia.acme.store.db.entity;
+package com.invillia.acme.order.db.entity;
 
 
 import lombok.AllArgsConstructor;
@@ -11,7 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.UUID;
 
 @Entity
 @Table(name = "\"ADDRESS\"")

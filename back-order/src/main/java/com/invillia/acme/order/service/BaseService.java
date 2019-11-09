@@ -1,6 +1,6 @@
-package com.invillia.acme.store.service;
+package com.invillia.acme.order.service;
 
-import com.invillia.acme.store.exception.ServiceException;
+import com.invillia.acme.order.exception.ServiceException;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

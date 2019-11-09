@@ -1,7 +1,7 @@
-package com.invillia.acme.store.repository.predicates;
+package com.invillia.acme.order.repository.predicates;
 
 
-import com.invillia.acme.store.db.entity.Store;
+import com.invillia.acme.order.db.entity.Store;
 import org.springframework.data.jpa.domain.Specification;
 
 import java.util.Objects;

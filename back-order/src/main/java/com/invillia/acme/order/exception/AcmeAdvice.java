@@ -1,4 +1,4 @@
-package com.invillia.acme.store.exception;
+package com.invillia.acme.order.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

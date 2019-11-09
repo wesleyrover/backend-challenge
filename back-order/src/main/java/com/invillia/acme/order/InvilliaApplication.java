@@ -1,6 +1,6 @@
-package com.invillia.acme;
+package com.invillia.acme.order;
 
-import com.invillia.acme.store.db.AcmeConfiguration;
+import com.invillia.acme.order.db.AcmeConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ import java.util.TimeZone;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan(value="com.invillia.acme")
+@ComponentScan(value="com.invillia.acme.order")
 public class InvilliaApplication  extends SpringBootServletInitializer {
 
 	static {

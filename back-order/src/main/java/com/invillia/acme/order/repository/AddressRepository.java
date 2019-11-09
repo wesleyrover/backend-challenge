@@ -1,6 +1,6 @@
-package com.invillia.acme.store.repository;
+package com.invillia.acme.order.repository;
 
-import com.invillia.acme.store.db.entity.Address;
+import com.invillia.acme.order.db.entity.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AddressRepository  extends JpaRepository<Address, String>{

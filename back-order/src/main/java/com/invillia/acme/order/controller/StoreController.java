@@ -1,9 +1,9 @@
-package com.invillia.acme.store.controller;
+package com.invillia.acme.order.controller;
 
-import com.invillia.acme.store.db.dto.StoreDto;
-import com.invillia.acme.store.db.entity.Store;
-import com.invillia.acme.store.db.mapper.StoreMapper;
-import com.invillia.acme.store.service.StoreService;
+import com.invillia.acme.order.db.dto.StoreDto;
+import com.invillia.acme.order.db.entity.Store;
+import com.invillia.acme.order.db.mapper.StoreMapper;
+import com.invillia.acme.order.service.StoreService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
@@ -13,13 +13,12 @@ import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
 @RestController()
-@RequestMapping(path = "/stores", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/orders", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Api(value = "Store")
 public class StoreController extends BaseController<Store, StoreService> {
 

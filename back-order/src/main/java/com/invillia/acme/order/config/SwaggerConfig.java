@@ -1,4 +1,4 @@
-package com.invillia.acme.store.config;
+package com.invillia.acme.order.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     public Docket greetingApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.invillia.acme"))
+                .apis(RequestHandlerSelectors.basePackage("com.invillia.acme.order"))
                 .build()
                 .apiInfo(metaData());
 
@@ -27,7 +27,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
-                .title("Acne Store - Spring Boot REST API")
+                .title("Acne Order - Spring Boot REST API")
                 .description("\"Invillia recruitment challenge\"")
                 .version("1.0.0")
                 .license("Apache License Version 2.0")

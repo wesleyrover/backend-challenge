@@ -1,4 +1,4 @@
-package com.invillia.acme.store.controller;
+package com.invillia.acme.order.controller;
 
 import com.invillia.acme.store.service.BaseService;
 import lombok.Getter;

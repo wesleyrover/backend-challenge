@@ -1,9 +1,9 @@
-package com.invillia.acme.store.controller;
+package com.invillia.acme.order.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.invillia.acme.store.db.dto.AddressDto;
-import com.invillia.acme.store.db.dto.StoreDto;
+import com.invillia.acme.order.db.dto.AddressDto;
+import com.invillia.acme.order.db.dto.StoreDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
