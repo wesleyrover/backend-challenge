@@ -1,0 +1,19 @@
+[
+  {
+    "_class": "com.invillia.acme.db.entity.Address",
+    "id": "a1898982-01bd-11ea-8d71-362b9e155667",
+    "place": "Rua Silveira Martins",
+    "complement": "Apto 101, edf Humailta",
+    "number": "95",
+    "neighborhood": "Cabula",
+    "city": "Salvador",
+    "zipcode": "41150-001",
+    "state": "Bahia"
+  },
+  {
+    "_class": "com.invillia.acme.db.entity.Store",
+    "id": "2372551e-01be-11ea-9a9f-362b9e155667",
+    "name": "Strore Demo",
+    "address": { "id" : "a1898982-01bd-11ea-8d71-362b9e155667" }
+  }
+]

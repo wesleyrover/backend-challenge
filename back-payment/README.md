@@ -3,8 +3,6 @@
 # My stories
   01 - Create a **Store** OK
   02 - Update a **Store** information Ok
-  03 - Retrieve ok
-  04 - 
   
 # My stories features (describe or implement):
 * Asynchronous processing 
