@@ -70,7 +70,10 @@ public class StoreController extends BaseController<Store, StoreService> {
     //@Secured("ROLE_ADMIN")
     public ResponseEntity<List<StoreDto>> getStore(@RequestParam(required = false) String name,
                                                    @RequestParam(required = false) String address) {
-        return ResponseEntity.status(HttpStatus.OK).body(StoreMapper.convertFrom(getService().findStore(name, address)));
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(StoreMapper
+                        .convertFrom(getService()
+                        .findStore(name, address)));
     }
 
 }

@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 public class AddressMapper {
 
     public static AddressDto convertFrom(Address address){
-        return AddressDto.builder()
+        return Objects.nonNull(address) ?
+                AddressDto.builder()
                 .id(address.getId())
                 .city(address.getCity())
                 .complement(address.getComplement())
@@ -19,11 +20,11 @@ public class AddressMapper {
                 .place(address.getPlace())
                 .state(address.getState())
                 .zipcode(address.getZipcode())
-                .build();
+                .build() : null;
     }
 
     public static Address convertTo(AddressDto addressDto){
-        return Address.builder()
+        return Objects.nonNull(addressDto) ? Address.builder()
                 .id(addressDto.getId())
                 .city(addressDto.getCity())
                 .complement(addressDto.getComplement())
@@ -32,7 +33,7 @@ public class AddressMapper {
                 .place(addressDto.getPlace())
                 .state(addressDto.getState())
                 .zipcode(addressDto.getZipcode())
-                .build();
+                .build() : null;
     }
 
     public static List<AddressDto> convertFrom(List<Address> addressList){
