@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +31,7 @@ public class StoreController extends BaseController<Store, StoreService> {
      */
     @PostMapping("/save")
     @ApiOperation(notes = "Salvar os dados de uma Store", value = "Store", response = ResponseEntity.class)
-    //@Secured("ROLE_ADMIN")
+    @Secured("ROLE_ADMIN")
     public ResponseEntity<StoreDto> save(@Validated @RequestBody StoreDto storeDto) throws Exception {
         if (Objects.isNull(storeDto.getId()))
             storeDto.setId(UUID.randomUUID().toString().toUpperCase());
@@ -49,7 +50,7 @@ public class StoreController extends BaseController<Store, StoreService> {
      */
     @PutMapping("/update/{id}")
     @ApiOperation(notes = "Atualiar os dados de uma Store", value = "Store", response = ResponseEntity.class)
-    //@Secured("ROLE_ADMIN")
+    @Secured("ROLE_ADMIN")
     public ResponseEntity<StoreDto> update(@Validated @RequestBody StoreDto storeDto, @PathVariable String id)
             throws Exception {
         Assert.notNull(id, "Id is not null");
@@ -66,7 +67,7 @@ public class StoreController extends BaseController<Store, StoreService> {
      */
     @GetMapping("/find")
     @ApiOperation(notes = "Recuperar uma Store por parametros", value = "Filter", response = ResponseEntity.class)
-    //@Secured("ROLE_ADMIN")
+    @Secured("ROLE_ADMIN")
     public ResponseEntity<List<StoreDto>> getStore(@RequestParam(required = false) String name,
                                                    @RequestParam(required = false) String address) {
         return ResponseEntity.status(HttpStatus.OK)

@@ -15,5 +15,7 @@
 		<module>back-store</module>
 		<module>back-order</module>
 		<module>back-payment</module>
-	</modules>
+		<module>back-auth</module>
+        <module>back-gateway</module>
+    </modules>
 </project>

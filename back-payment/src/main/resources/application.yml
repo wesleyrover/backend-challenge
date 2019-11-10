@@ -1,20 +1,19 @@
 server:
-  port: 8889
+  port: 8883
 
 spring:
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:AZ
-    username: root
-    password: root
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      format-sql: true
+  driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:db4free.net}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:brwstore}
+    username: roverdb
+    password: R@ver1978
+    jpa:
+      database-platform: org.hibernate.dialect.MySQL57Dialect
+      show-sql: true
       hibernate:
-        jdbc:
-          lob:
-            non_contextual_creation: true
+        ddl-auto: create-drop
+      properties:
+        format-sql: true
+        hibernate:
+          jdbc:
+            lob:
+              non_contextual_creation: true
