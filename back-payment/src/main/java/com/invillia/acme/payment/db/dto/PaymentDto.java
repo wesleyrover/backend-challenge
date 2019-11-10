@@ -1,18 +1,18 @@
-package com.invillia.acme.store.db.dto;
+package com.invillia.acme.payment.db.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class StoreDto {
-
+public class PaymentDto {
     private java.lang.String id;
-    private java.lang.String name;
-    private AddressDto address;
+    private String numberCard;
+    private String idOrder;
 }

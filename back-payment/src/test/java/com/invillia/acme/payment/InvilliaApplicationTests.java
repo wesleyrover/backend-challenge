@@ -1,4 +1,4 @@
-package com.invillia.acme;
+package com.invillia.acme.payment;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

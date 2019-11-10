@@ -19,7 +19,7 @@ import java.util.UUID;
 
 @RestController()
 @RequestMapping(path = "/orders", produces = {MediaType.APPLICATION_JSON_VALUE})
-@Api(value = "Store")
+@Api(value = "Order")
 public class OrderController extends BaseController<Order, OrderService> {
 
     /**
