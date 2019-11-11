@@ -30,7 +30,7 @@ public class AuthServiceTest {
     HttpServletResponse response = mock(HttpServletResponse.class);
 
     @Test
-    public void deveRealizarLoginRetornarToken() throws IOException {
+    public void gerarToken() throws IOException {
         String token = authService.login(request, response, login.getLogin(), login.getSenha());
         Assert.assertNotNull(token);
     }

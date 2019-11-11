@@ -26,11 +26,11 @@ zuul:
       url: http://localhost:8881/
       sensitiveHeaders:
       serviceId: store
-#    order:
-#      url: http://localhost:8890/
-#      sensitiveHeaders:
-#      serviceId: order
-#    payment:
-#      url: http://localhost:8891/
-#      sensitiveHeaders:
-#      serviceId: payment
+    order:
+      url: http://localhost:8882/
+      sensitiveHeaders:
+      serviceId: order
+    payment:
+      url: http://localhost:8883/
+      sensitiveHeaders:
+      serviceId: payment

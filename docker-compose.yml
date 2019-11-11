@@ -37,15 +37,15 @@ services:
       - "8881:8881"
     #depends_on:
     #  - docker-mysql
-#  order:
-#    image: order-docker
-#    ports:
-#      - "8882:8882"
-#    #depends_on:
-#    #  - docker-mysql
-#  payment:
-#    image: payment-docker
-#    ports:
-#      - "8883:8883"
+  order:
+    image: order-docker
+    ports:
+      - "8882:8882"
     #depends_on:
     #  - docker-mysql
+  payment:
+    image: payment-docker
+    ports:
+      - "8883:8883"
+#    depends_on:
+#      - docker-mysql

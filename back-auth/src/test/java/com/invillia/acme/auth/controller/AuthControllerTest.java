@@ -30,14 +30,14 @@ public class AuthControllerTest {
     LoginDto loginFail = LoginDto.builder().login("admin").senha("12345684 ").build();
 
     @Test
-    public void deveRealizarLoginRetornarToken() throws Exception {
+    public void loginRetornarToken() throws Exception {
         mockMvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(login)).header("Content-Type", "application/json"))
                 .andExpect(status().isOk());
     }
 
     @Test
-    public void naoDeveRealizarLoginRetornarToken() throws Exception {
+    public void loginNaoRetornarToken() throws Exception {
         mockMvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(loginFail)).header("Content-Type", "application/json"))
                 .andExpect(status().isInternalServerError());

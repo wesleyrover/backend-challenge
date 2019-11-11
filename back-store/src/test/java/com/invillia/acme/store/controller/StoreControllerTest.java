@@ -27,6 +27,8 @@ public class StoreControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
+    String token = "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImV4cCI6MTU3NDI5OTgzNX0.8pmZsDR_rd2ZG2L2jAkfanJfsRGK1uHnhoY9CVyvqyX4qQXf60k8omHrcdnZ4YF7WG27Yjw6i0mwPS6itN-Q6A";
+
     @Test
     public void save() throws Exception {
         StoreDto storeDTO = StoreDto.builder()
@@ -42,7 +44,7 @@ public class StoreControllerTest {
                         .build())
                 .build();
         mockMvc.perform(post("/stores/save").contentType(MediaType.APPLICATION_JSON)
-                //  .header("Authorization", token)
+                .header("Authorization", token)
                 .content(objectMapper.writeValueAsString(storeDTO))
                 .header("Content-Type", "application/json"))
                 .andExpect(status().isCreated());
@@ -54,7 +56,7 @@ public class StoreControllerTest {
                 .name("Store - Teste - demo")
                 .build();
         mockMvc.perform(post("/stores/save").contentType(MediaType.APPLICATION_JSON)
-                //  .header("Authorization", token)
+                .header("Authorization", token)
                 .content(objectMapper.writeValueAsString(storeDTO))
                 .header("Content-Type", "application/json"))
                 .andExpect(status().isCreated());
@@ -68,13 +70,13 @@ public class StoreControllerTest {
                 .name("Store - Teste")
                 .build();
         mockMvc.perform(post("/stores/save").contentType(MediaType.APPLICATION_JSON)
-                //  .header("Authorization", token)
+                .header("Authorization", token)
                 .content(objectMapper.writeValueAsString(storeDTO))
                 .header("Content-Type", "application/json"))
                 .andExpect(status().isCreated());
         storeDTO.setName("Store - Teste - demo");
         mockMvc.perform(put("/stores/update/A").contentType(MediaType.APPLICATION_JSON)
-                //  .header("Authorization", token)
+                .header("Authorization", token)
                 .content(objectMapper.writeValueAsString(storeDTO))
                 .header("Content-Type", "application/json"))
                 .andExpect(status().isOk());
@@ -83,7 +85,7 @@ public class StoreControllerTest {
     @Test
     public void getStore() throws Exception {
         mockMvc.perform(get("/stores/find").contentType(MediaType.APPLICATION_JSON)
-               // .header("Authorization", token)
+                .header("Authorization", token)
                 .header("Content-Type", "application/json"))
                 .andExpect(status().isOk());
     }
