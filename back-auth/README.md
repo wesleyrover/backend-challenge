@@ -1,24 +1,7 @@
 # Invillia recruitment challenge
 
 # My stories
-
-  * 01 - Create a **Store** OK 
-  * 02 - Update a **Store** information Ok
-  * 03 - Retrieve a **Store** by parameters OK
-  * 04 - Create an **Order** with items ok
-  * 05 - Create a **Payment** for an **Order** ok
-  * 06 - Retrieve an **Order** by parameters 
-  * 07 - Refund **Order** or any **Order Item**
-  
-# My stories features (describe or implement):
-* Asynchronous processing 
-* Database - ok
-* Docker
-* AWS
-* Security
-* Swagger - ok
-* Clean Code - ok
-
+  * Order
 
 [![Build Status](https://travis-ci.org/shelsonjava/invillia.svg?branch=master)](https://travis-ci.org/shelsonjava/invillia)
 
