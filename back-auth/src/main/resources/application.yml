@@ -1,0 +1,20 @@
+server:
+  port: 8884
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:db4free.net}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:brwstore}
+    username: roverdb
+    password: R@ver1978
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      format-sql: true
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true

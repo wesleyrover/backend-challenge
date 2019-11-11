@@ -1,0 +1,51 @@
+version: '3'
+services:
+#  docker-mysql:
+#      image: mysql:latest
+#      command: --default-authentication-plugin=mysql_native_password
+#      restart: always
+#      environment:
+#        MYSQL_ROOT_PASSWORD: invillia
+#
+#  adminer:
+#      image: adminer
+#      restart: always
+#      ports:
+#        - 8080:8080
+#      depends_on:
+#        - docker-mysql
+  gateway:
+    build:
+      context: .
+      dockerfile: back-gateway/Dockerfile
+    image: gateway-docker
+    ports:
+      - "8080:8080"
+  auth:
+    build:
+      context: .
+      dockerfile: back-auth/Dockerfile
+    image: auth-docker
+    ports:
+      - "8884:8884"
+  store:
+    build:
+      context: .
+      dockerfile: back-store/Dockerfile
+    image: store-docker
+    ports:
+      - "8881:8881"
+    #depends_on:
+    #  - docker-mysql
+  order:
+    image: order-docker
+    ports:
+      - "8882:8882"
+    #depends_on:
+    #  - docker-mysql
+  payment:
+    image: payment-docker
+    ports:
+      - "8883:8883"
+#    depends_on:
+#      - docker-mysql
